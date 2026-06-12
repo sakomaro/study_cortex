@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Cortex</title>
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Study Cortex</h1>
+
+        <div class="nav-buttons">
+            <a href="{% url 'pomodoro' %}" class="nav-button">
+                🍅 Pomodoro Timer
+            </a>
+
+            <a href="{% url 'clock' %}" class="nav-button">
+                🕒 World Clock
+            </a>
+
+            <a href="{% url 'notes' %}" class="nav-button">
+                📝 Note Taking App
+            </a>
+
+            <a href="{% url 'todo' %}" class="nav-button">
+                ✅ Topic To-Do List
+            </a>
+        </div>
+
+        <a href="https://www.youtube.com/@jvscholz" class="discord-link">
+            Learn how to study with James V. Scholz
+        </a>
+
+    </div>
+
+</body>
+</html>

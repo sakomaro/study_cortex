@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d2129;
+}
+
+.clock-container {
+    background: #2a2f3a;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    text-align: center;
+    min-width: 550px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.timezone-selector {
+    margin-bottom: 2rem;
+}
+
+label {
+    color: white;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+select {
+    background-color: #12151b;
+    color: white;
+    border: 2px solid #0000EE;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.clock-display {
+    margin: 2rem 0;
+}
+
+#date {
+    color: #aab2c0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+#clock {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #12151b;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #0000EE;
+    border-radius: 10px;
+    padding: 12px 18px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 0, 238, 0.4);
+}
+
+@media (max-width: 700px) {
+
+    .clock-container {
+        min-width: 90%;
+        padding: 2rem;
+    }
+
+    #clock {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    select {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}

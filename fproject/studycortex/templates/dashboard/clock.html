@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+
+    <link rel="stylesheet" href="{% static 'css/clock.css' %}">
+</head>
+<body>
+
+    <div class="clock-container">
+
+        <h1>🕒 World Clock</h1>
+
+        <div class="timezone-selector">
+
+            <label for="timezone">
+                Timezone:
+            </label>
+
+            <select id="timezone">
+
+                <option value="Europe/Lisbon" selected>
+                    🇵🇹 Lisbon
+                </option>
+
+                <option value="Europe/London">
+                    🇬🇧 London
+                </option>
+
+                <option value="Europe/Paris">
+                    🇫🇷 Paris
+                </option>
+
+                <option value="America/New_York">
+                    🇺🇸 New York
+                </option>
+
+                <option value="America/Chicago">
+                    🇺🇸 Chicago
+                </option>
+
+                <option value="America/Los_Angeles">
+                    🇺🇸 Los Angeles
+                </option>
+
+                <option value="Asia/Tokyo">
+                    🇯🇵 Tokyo
+                </option>
+
+                <option value="Asia/Seoul">
+                    🇰🇷 Seoul
+                </option>
+
+                <option value="Asia/Shanghai">
+                    🇨🇳 Shanghai
+                </option>
+
+                <option value="Australia/Sydney">
+                    🇦🇺 Sydney
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="clock-display">
+
+            <div id="date"></div>
+
+            <div id="clock"></div>
+
+        </div>
+
+        <a href="{% url 'home' %}" class="back-button">
+            ← Back to Homepage
+        </a>
+
+    </div>
+
+    <script src="{% static 'js/clock.js' %}"></script>
+
+</body>
+</html>

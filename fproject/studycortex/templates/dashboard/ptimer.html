@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+
+    <link rel="stylesheet" href="{% static 'css/pomodoro.css' %}">
+</head>
+<body>
+
+    <div class="timer-container">
+
+        <h1>🍅 Pomodoro Timer</h1>
+
+        <h3 id="mode">Mode: 25 / 5</h3>
+
+        <h2 id="session">Focus Session</h2>
+
+        <h1 id="timer">25:00</h1>
+
+        <div class="mode-buttons">
+            <button onclick="setMode('25-5')">
+                25 / 5
+            </button>
+
+            <button onclick="setMode('50-10')">
+                50 / 10
+            </button>
+        </div>
+
+        <div class="control-buttons">
+            <button onclick="startTimer()">
+                Start
+            </button>
+
+            <button onclick="pauseTimer()">
+                Pause
+            </button>
+
+            <button onclick="resetTimer()">
+                Reset
+            </button>
+        </div>
+
+        <a href="{% url 'home' %}" class="back-button">
+            ← Back to Homepage
+        </a>
+
+    </div>
+
+    <script src="{% static 'js/pomodoro.js' %}"></script>
+
+</body>
+</html>
